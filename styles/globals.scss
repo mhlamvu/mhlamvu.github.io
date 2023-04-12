@@ -1,0 +1,31 @@
+@use './layout/app';
+@use './layout/animated-image';
+@use './layout/paragraph';
+@use './layout/project';
+@use './layout/loader';
+@use './layout/about';
+
+@font-face {
+  font-family: "Poiret One";
+  src: url(../fonts/PoiretOne-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+

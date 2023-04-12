@@ -1,0 +1,96 @@
+.wrapper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .wrapper .container {
+    width: 96%;
+    margin: 0 auto;
+  }
+  
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: gray;
+  }
+  
+  .whitespace {
+    width: 100%;
+    height: 80px;
+  }
+
+/* header */
+.about-header {
+    margin: 80px 0;
+    z-index: 2 !important;
+  }
+  
+  .about-header .about-header-container h1 {
+    font-family: "Poiret One";
+    font-size: 10vw;
+  }
+  
+  /* section header */
+  .section-header .section-header-container {
+    display: flex;
+    padding: 12px 0;
+    font-size: 1rem;
+    justify-content: space-between;
+  }
+
+
+/* about */
+.about {
+    width: 100%;
+}
+
+.about::after {
+content: "";
+display: table;
+clear: both;
+}
+
+.about .about-container {
+width: 70%;
+float: right;
+}
+
+.about .about-container p {
+margin: 40px 0;
+font-size: 36px;
+}
+
+.socials {
+padding: 20px 0;
+font-family: "Monument";
+}
+
+.socials .socials-container {
+display: flex;
+justify-content: space-between;
+}
+
+.socials .socials-container a {
+cursor: pointer;
+text-decoration: none;
+font-size: 64px;
+}
+
+@media (max-width: 900px) {
+    .header .header-container h1 {
+      font-size: 3rem;
+    }
+  
+    .about .about-container {
+      width: 100%;
+    }
+  
+    .about .about-container p {
+      font-size: 24px;
+    }
+  
+    .socials .socials-container a {
+      font-size: 30px;
+    }
+  }
+  

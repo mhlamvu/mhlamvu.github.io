@@ -1,0 +1,81 @@
+.main-container {
+    padding: 0 6.597vw;
+    z-index: 99;
+  }
+  
+  .image-container {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -6.597vw;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    top: 20vh;
+  }
+  
+  .image-container img {
+    position: absolute;
+    height: 60vh;
+    width: auto;
+    transition: transform .25s ease-in-out;
+    filter: grayscale(1);
+    z-index: 98;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .04), 0 2px 4px rgba(0, 0, 0, .04), 0 4px 8px rgba(0, 0, 0, .04), 0 8px 16px rgba(0, 0, 0, .04), 0 16px 32px rgba(0, 0, 0, .04), 0 32px 64px rgba(0, 0, 0, .04),;
+  }
+  
+  .image-container img.active {
+    z-index: 99;
+  }
+  
+  .title-container {
+    position: relative;
+    display: block;
+    /* padding-top: 37.77vh; */
+    padding-bottom: 10vh;
+    font-weight: lighter;
+    font-size: 5vw;
+    text-transform: uppercase;
+    width: fit-content;
+    font-family: "Poiret One";
+  }
+  
+  .title-container p {
+    display: inline;
+    font-size: 10vw;
+    font-weight: bold;
+    line-height: 1.25;
+    // padding: -1vh 0;
+    color: #2d2d2d;
+    transition: color .25s ease-in-out;
+    width: fit-content;
+  }
+  
+  .title-container:hover p {
+    color: #bababa;
+  }
+  
+  .title-item {
+    cursor: pointer;
+  }
+  
+  .title-item:hover p {
+    color: #2d2d2d;
+  }
+  
+  .header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    padding: 1.5vh 5vw;
+    z-index: 1000;
+  }
+  
+  .header li {
+    font-size: 2vw;
+    padding: 0 1em;
+    list-style: none;
+    cursor: pointer;
+  }

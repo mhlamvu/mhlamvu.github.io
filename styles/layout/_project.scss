@@ -1,0 +1,41 @@
+.single-project {
+    // position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    will-change: transform;
+    z-index: 1;
+
+    .page-container {
+        width: 100%;
+        margin: 0 auto;
+        background-color: var(--page-container-background);
+    }
+
+    .page-grid {
+        padding-top: 20vh;
+        padding-left: 20%;
+        height: fit-content;
+    }
+
+    .media-wrapper {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        width: calc(var(--image-width)* 1%);
+        margin-left: calc(var(--image-margin)* 1%);
+
+        &.is-reveal {
+            .animated-image {
+                .placeholder {
+                    opacity: 0;
+                }
+
+                .media-image {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
