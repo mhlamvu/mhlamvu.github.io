@@ -4,7 +4,7 @@ import cn from 'classnames'
 export default function Image({ slug, active, rotationPosition }) {
   return (
     <img
-        className={cn({ active })}
+        className={cn({ active }, 'project-image')}
         src={slug}
         style={{
             transform: active ? `scale(1.1) rotate(${rotationPosition}deg)` : `rotate(${rotationPosition}deg)`

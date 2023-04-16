@@ -41,12 +41,31 @@ export default function Home() {
         </div>
         <div className="image-container">
           {pageData.map(({ media }, index) => (
-            <Image 
-              key={index} 
-              slug={media[0].url} 
-              active={activeIndex === index} 
-              rotationPosition={rotationPosition[index]} 
-            />
+            <>
+              {/* <motion.div
+                initial={{
+                  opacity: 0,
+                  translateX: "20vw",
+                  translateY: "20vh",
+                }}
+                animate={{
+                  opacity: 1,
+                  translateX: "0",
+                  translateY: "0",
+                }}
+                transition={{
+                  duration: 1,
+                  delay: index * .2
+                }}
+              > */}
+                <Image 
+                  key={index} 
+                  slug={media[0].url} 
+                  active={activeIndex === index} 
+                  rotationPosition={rotationPosition[index]} 
+                />
+              {/* </motion.div> */}
+            </>
           ))}
         </div>
       </motion.div>

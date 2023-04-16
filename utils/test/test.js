@@ -19,7 +19,7 @@ export const pageData = [
                 url: "images/swiper/5.png",
             },
         ],
-        about: 'Horizontal scroll gallery utilizing the swiper.sj library.',
+        about: 'Horizontal scroll gallery utilizing the swiper.js library.',
         director: "Swiper.js",
         photographer: "Swiper.js",
         color: "#b414c3"

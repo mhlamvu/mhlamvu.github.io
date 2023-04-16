@@ -1,11 +1,30 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 // import { pageData } from '../utils/test/data'
+import { useRouter } from 'next/router'
+import { useLocomotiveScroll } from 'react-locomotive-scroll';
 import { pageData } from '../utils/test/test'
+import imagesloaded from 'imagesloaded'
 
 import ProjectDescription from '../components/Project/ProjectDescription'
 import MediaSection from '../components/Project/MediaSection'
 
+const preloadImages = selector => {
+  return new Promise(resolve => {
+      imagesloaded(document.querySelectorAll(selector), { background: true }, resolve)
+  })
+}
+
 function SingleProject({ project }) {
+
+  const { scroll } = useLocomotiveScroll()
+  const router = useRouter()
+  const { slug } = router.query
+
+  useEffect(() => {
+      Promise.all([preloadImages('.media-image')]).then(() => {
+          if(scroll) scroll.update()
+      })
+  }, [scroll, slug])
 
   if(!project) return null
   console.log(project)
@@ -16,13 +35,13 @@ function SingleProject({ project }) {
         <div className='single-project page-wrapper'>
           <div 
             className="page-container" 
-            // data-scroll-container 
+            data-scroll-section 
             // ref={scrollRef}
             style={{
               '--page-container-background': project?.color
             }}
           >
-              <div className="page-grid" data-scroll-section>
+              <div className="page-grid" data-scroll>
                   <MediaSection url={firstMedia.url} index={0} />
   
                   <ProjectDescription
